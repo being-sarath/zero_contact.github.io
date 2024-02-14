@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-xwBOg8kTt0i3Cv9zkZNa+uFT9DB+GVo9DBzdbvWlD8Je8CxgkNUoM/9lWhVFmm8BdIZPn7ynJfEdlIiNRkpBxVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            margin-left: -100px;
+        }
+
+        .icon-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .icon {
+            width: 50px;
+            object-fit: cover;
+            height: 50px;
+            background-color: white;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 20%;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.05);
+        }
+
+        .button {
+            padding-left: 20px;
+            margin-left: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: #212121;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 10%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: width 0.3s ease, opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .icon-container:hover .button {
+            width: 140px;
+            opacity: 1;
+        }
+
+        .icon:active+.button {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="icon-container">
+        <div class="icon" onclick="expandButton()">
+            <img src="547547-200.png" class="icon">
+        </div>
+        <div class="button" onclick="performAction()">contact us</div>
+    </div>
+
+    <script>
+        function expandButton() {
+        }
+
+        function performAction() {
+            alert('Button clicked!');
+        }
+    </script>
+
+</body>
+
+</html>
